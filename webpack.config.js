@@ -24,10 +24,8 @@ module.exports = {
         test: /\.html$/,
         use: [
 
-          { loader: 'html-loader', },
-
-
-        ]
+          { loader: 'html-loader' },
+        ],
       },
       {
         test: /\.(s*)css$/,
@@ -37,10 +35,9 @@ module.exports = {
           'sass-loader',
         ],
       },
-
-
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
@@ -50,4 +47,4 @@ module.exports = {
       filename: 'assets/[name].css',
     }),
   ],
-};
+}
