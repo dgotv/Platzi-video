@@ -10,7 +10,7 @@ import '../assets/styles/App.scss';
 
 const API = 'http://localhost:3000/initialState'
 
-const App = () => {
+const Home = () => {
   const InitialState = useInitialState(API);
   return InitialState.length === 0 ? <h1>Loading...</h1> :
     (
@@ -42,4 +42,4 @@ const App = () => {
       </div>
     );
 }
-export default App;
+export default Home;
