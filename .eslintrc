@@ -22,7 +22,7 @@
   "rules": {
     "semi": 0, // regla añadida
     "react/jsx-props-no-spreading": 0, //regla añadida
-    "import/prefer-default-export": "off",
+    //"import/prefer-default-export": "off",//regla añadida
     "react/jsx-filename-extension": 0,
     "array-bracket-spacing": 2,
     "arrow-body-style": 0,

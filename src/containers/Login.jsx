@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions'
 import '../assets/styles/components/Login.scss'
 import googleIcon from '../assets/static/google-icon.png';
 import twitterIcon from '../assets/static/twitter-icon.png';
@@ -17,8 +19,8 @@ const Login = (props) => {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    // props.loginRequest(form);
-    // props.history.push('/');
+    props.loginRequest(form);
+    props.history.push('/');
   }
 
   return (
@@ -73,4 +75,9 @@ const Login = (props) => {
 
   )
 }
-export default Login
+
+const mapDispathchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispathchToProps)(Login)
